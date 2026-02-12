@@ -2,62 +2,89 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Login</title>
+    <title>Formulario con CSS</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background: linear-gradient(135deg, #ea9266, #764ba2);
+            background: linear-gradient(135deg, #4facfe, #00f2fe);
             height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
         }
 
-        .login-container {
+        .form-container {
             background: white;
-            padding: 25px 30px;
+            padding: 25px;
             border-radius: 10px;
-            width: 300px;
-            box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+            width: 320px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.2);
         }
 
-        h2 {
+        .form-container h2 {
             text-align: center;
             margin-bottom: 20px;
         }
 
-        input {
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input, textarea {
             width: 100%;
             padding: 10px;
-            margin: 8px 0;
             border-radius: 5px;
             border: 1px solid #ccc;
+            outline: none;
+        }
+
+        input:focus, textarea:focus {
+            border-color: #4facfe;
         }
 
         button {
             width: 100%;
             padding: 10px;
-            background: #667eea;
+            background: #4facfe;
             border: none;
-            color: white;
             border-radius: 5px;
+            color: white;
             font-size: 16px;
             cursor: pointer;
         }
 
         button:hover {
-            background: #5a67d8;
+            background: #00c6fb;
         }
     </style>
 </head>
 <body>
 
-<div class="login-container">
-    <h2>Iniciar Sesión</h2>
-    <form action="#" method="post">
-        <input type="text" name="usuario" placeholder="Usuario" required>
-        <input type="password" name="password" placeholder="Contraseña" required>
-        <button type="submit">Ingresar</button>
+<div class="form-container">
+    <h2>Formulario</h2>
+    <form action="/store" method="GET">
+        <div class="form-group">
+            <label>Nombre</label>
+            <input type="text" placeholder="Ingrese su nombre" required>
+        </div>
+
+        <div class="form-group">
+            <label>Correo</label>
+            <input type="email" placeholder="Ingrese su correo" required>
+        </div>
+
+        <div class="form-group">
+            <label>Mensaje</label>
+            <textarea rows="4" placeholder="Escribe tu mensaje" required></textarea>
+        </div>
+
+        <button type="submit">Enviar</button>
     </form>
 </div>
 

@@ -1,6 +1,7 @@
 
 # Foto de perfil
-<img src="javier_luna.jpg" width="100">
+
+<img src="img/javier_luna.jpg" width="100">
 
 # 👋 Hola, soy Javier Luna Díaz
 
